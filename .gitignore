@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+gpp.config.json
+.DS_Store
+Thumbs.db

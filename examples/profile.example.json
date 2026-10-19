@@ -1,0 +1,19 @@
+{
+  "name": "Your Name",
+  "headline": "Your Title | Your focus areas",
+  "summary": "One sentence on who you are and how you build.",
+  "badges": [
+    {"label": "Portfolio", "message": "your-site", "color": "111827", "logo": "vercel", "url": "https://your-site.example.com"},
+    {"label": "LinkedIn", "message": "yourhandle", "color": "0A66C2", "logo": "linkedin", "url": "https://www.linkedin.com/in/yourhandle/"}
+  ],
+  "about_intro": "Two sentences on what you do and what you care about. Here is what I have learned by building:",
+  "about_bullets": [
+    "**Skill one:** what you built and learned, backed by a repo.",
+    "**Skill two:** another concrete skill with the tools you used."
+  ],
+  "toolbox": {
+    "Languages": ["Python", "JavaScript"],
+    "Tools": ["Git", "GitHub"]
+  },
+  "show_languages_card": true
+}

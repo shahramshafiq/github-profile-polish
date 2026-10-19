@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Profile Polish</title>
+<meta name="description" content="A Claude Code skill that audits your GitHub account and fixes it so recruiters are impressed.">
+<style>
+  :root { --bg:#0b1020; --card:#121a33; --ink:#e8ecf8; --mute:#93a0c4; --acc:#5eead4; --acc2:#818cf8; --bad:#fb7185; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:radial-gradient(1200px 600px at 70% -10%, #1b2760 0%, var(--bg) 60%); color:var(--ink);
+         font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width:980px; margin:0 auto; padding:0 24px; }
+  header { padding:88px 0 40px; text-align:center; }
+  .pill { display:inline-block; padding:6px 14px; border:1px solid #2a3768; border-radius:999px; color:var(--acc); font-size:13px; letter-spacing:.04em; }
+  h1 { font-size:clamp(36px,6vw,64px); line-height:1.08; margin:22px 0 14px; letter-spacing:-.02em; }
+  h1 span { background:linear-gradient(90deg,var(--acc),var(--acc2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .lead { color:var(--mute); font-size:19px; max-width:640px; margin:0 auto; }
+  .row { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:46px 0; }
+  .card { background:var(--card); border:1px solid #222d58; border-radius:16px; padding:22px; }
+  .card h3 { margin:0 0 12px; font-size:15px; text-transform:uppercase; letter-spacing:.08em; color:var(--mute); }
+  .before h3 { color:var(--bad); } .after h3 { color:var(--acc); }
+  ul.repos { list-style:none; margin:0; padding:0; font-family:ui-monospace, Consolas, monospace; font-size:14px; }
+  ul.repos li { padding:6px 0; border-bottom:1px dashed #263262; display:flex; justify-content:space-between; gap:12px; }
+  ul.repos li:last-child { border:0; }
+  .before li { color:#fda4af; } .after li { color:#99f6e4; }
+  .score { color:var(--mute); }
+  h2 { font-size:28px; margin:64px 0 18px; text-align:center; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .feat b { color:var(--acc); display:block; margin-bottom:4px; }
+  .feat p { margin:0; color:var(--mute); font-size:15px; }
+  .steps { counter-reset:s; display:grid; gap:14px; }
+  .step { display:flex; gap:16px; align-items:flex-start; }
+  .step:before { counter-increment:s; content:counter(s); flex:none; width:34px; height:34px; border-radius:50%;
+                 background:linear-gradient(135deg,var(--acc),var(--acc2)); color:#06101f; font-weight:700; display:grid; place-items:center; }
+  pre { margin:8px 0 0; background:#0a0f20; border:1px solid #222d58; border-radius:10px; padding:12px 14px; overflow:auto;
+        font:13.5px/1.5 ui-monospace, Consolas, monospace; color:#c7d2fe; }
+  footer { text-align:center; color:var(--mute); padding:60px 0 70px; font-size:14px; }
+  a { color:var(--acc); }
+  @media (max-width:760px) { .row, .grid { grid-template-columns:1fr; } header { padding-top:56px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="pill">Claude Code skill &middot; free &middot; open source</span>
+    <h1>Make your GitHub <span>recruiter-ready</span></h1>
+    <p class="lead">Your recruiter reads your resume, then opens your GitHub. This skill audits every repo and fixes names, READMEs, topics and leaks so each project looks organized.</p>
+  </header>
+
+  <div class="row">
+    <div class="card before"><h3>Before</h3>
+      <ul class="repos">
+        <li><span>University-Course-Scheduling-Optimizer-using-Genetic-Algo-in-AI</span><span class="score">no description</span></li>
+        <li><span>devmind-test</span><span class="score">1 file</span></li>
+        <li><span>My-Portfolio</span><span class="score">stale link</span></li>
+        <li><span>project_final_v2</span><span class="score">no README</span></li>
+      </ul></div>
+    <div class="card after"><h3>After</h3>
+      <ul class="repos">
+        <li><span>course-scheduling-genetic-algorithm</span><span class="score">95 / 100</span></li>
+        <li><span>sec-filings-rag-qa</span><span class="score">95 / 100</span></li>
+        <li><span>aircursor</span><span class="score">95 / 100</span></li>
+        <li><span>streaming-voice-agent</span><span class="score">95 / 100</span></li>
+      </ul></div>
+  </div>
+
+  <h2>What it does</h2>
+  <div class="grid">
+    <div class="card feat"><b>Audit score</b><p>Every public repo graded out of 100, worst first.</p></div>
+    <div class="card feat"><b>Leak scan</b><p>Secrets, personal data, junk files and terms you must never publish.</p></div>
+    <div class="card feat"><b>One README standard</b><p>Same structure everywhere, linted for broken links and filler words.</p></div>
+    <div class="card feat"><b>Smart renames</b><p>Consistent kebab-case names, with warnings for repos that have live URLs.</p></div>
+    <div class="card feat"><b>Profile README</b><p>A clean intro, skills and toolbox generated from a small JSON file.</p></div>
+    <div class="card feat"><b>Safe by design</b><p>Backups first. No deletes or force-pushes without your approval.</p></div>
+  </div>
+
+  <h2>Install in two minutes</h2>
+  <div class="card steps">
+    <div class="step"><div><strong>Clone it into your Claude skills folder</strong>
+      <pre>git clone https://github.com/shahramshafiq/github-profile-polish ~/.claude/skills/github-profile-polish</pre></div></div>
+    <div class="step"><div><strong>Sign in to GitHub once</strong>
+      <pre>gh auth login</pre></div></div>
+    <div class="step"><div><strong>Open Claude Code and run it</strong>
+      <pre>/github-profile-polish</pre></div></div>
+  </div>
+
+  <footer>
+    Built by <a href="https://github.com/shahramshafiq">Shahram Shafiq</a> &middot;
+    <a href="https://github.com/shahramshafiq/github-profile-polish">github.com/shahramshafiq/github-profile-polish</a>
+  </footer>
+</div>
+</body>
+</html>

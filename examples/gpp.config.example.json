@@ -1,0 +1,13 @@
+{
+  "owner": null,
+  "forbidden_terms": ["Your Employer Name", "internal-codename"],
+  "filler_words": ["using", "in", "of", "the", "a", "an", "and", "for", "with", "system"],
+  "description_min": 40,
+  "description_max": 110,
+  "topics_min": 5,
+  "topics_max": 8,
+  "ascii_only": true,
+  "readme_sections": ["Overview", "Key Features", "Tech Stack", "Project Structure", "Getting Started"],
+  "stale_months": 18,
+  "ignore_repos": []
+}
